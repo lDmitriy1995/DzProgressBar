@@ -1,0 +1,23 @@
+﻿<Window x:Class="DancingProgressBars.MainWindow"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:local="clr-namespace:DancingProgressBars"
+              mc:Ignorable="d"
+              Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Number of bars:"/>
+            <TextBox x:Name="NumberOfBarsTextBox" Width="50" Margin="5"/>
+            <Button x:Name="StartButton" Content="Start" Margin="5" Click="StartButton_Click"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel x:Name="ProgressBarStackPanel" Margin="5"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
